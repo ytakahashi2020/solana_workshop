@@ -20,6 +20,9 @@
       }
     }
   },
-  "postCreateCommand": "echo '=== Solana Dev Environment ===' && solana --version && anchor --version && rustc --version && node --version && pnpm --version && echo '=== Ready! ==='",
+  "remoteEnv": {
+    "PATH": "/home/vscode/.local/share/solana/install/active_release/bin:/home/vscode/.avm/bin:/home/vscode/.cargo/bin:${containerEnv:PATH}"
+  },
+  "postCreateCommand": "echo '=== Solana Dev Environment ===' && solana --version && anchor --version && rustc --version && node --version && npx --version && echo '=== Ready! ==='",
   "remoteUser": "vscode"
 }
